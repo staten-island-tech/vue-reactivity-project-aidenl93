@@ -5,7 +5,7 @@
               <div class="shoelist">
             <h2>{{ shoe.brand }} </h2>
             <h2>{{ shoe.model }} </h2>
-           <button class="buybutton"> ${{ shoe.price }} </button>
+           <button class="buybutton" @click="buyShoe(shoe)"> ${{ shoe.price }} </button>
               </div>
             </section>
              
