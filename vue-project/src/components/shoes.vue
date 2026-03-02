@@ -16,7 +16,6 @@
 <script setup>
 
 import {ref} from 'vue'
-const emit = defineEmits(['buy'])
 const shoes = ref([
   {
     id: 1,
@@ -67,10 +66,13 @@ const shoes = ref([
     price: 150
   }
 ]);
+const shoesbought = ref([])
 function buyShoe(shoe) {
-  emit('buy', shoe)
   console.log(shoe)
+  shoesbought.push(shoe)
+  console.log(shoesbought)
 }
+
 </script>
 
 <style scoped>
