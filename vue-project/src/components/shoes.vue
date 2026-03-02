@@ -73,6 +73,7 @@ function buyShoe(shoe) {
   console.log(shoesbought)
 }
 
+
 </script>
 
 <style scoped>
