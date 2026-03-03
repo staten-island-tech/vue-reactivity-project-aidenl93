@@ -5,10 +5,9 @@
               <div class="shoelist">
             <h2>{{ shoe.brand }} </h2>
             <h2>{{ shoe.model }} </h2>
-           <button class="buybutton" @click="buyShoe(shoe)"> ${{ shoe.price }} </button>
+            <button class="buybutton" @click="buyShoe(shoe)"> ${{ shoe.price }} </button>
               </div>
             </section>
-             
         </li>
     </div>
 </template>
@@ -69,7 +68,7 @@ const shoes = ref([
 const shoesbought = ref([])
 function buyShoe(shoe) {
   console.log(shoe)
-  shoesbought.push(shoe)
+  shoesbought.value.push(shoe)
   console.log(shoesbought)
 }
 
@@ -77,10 +76,10 @@ function buyShoe(shoe) {
 </script>
 
 <style scoped>
-.container {
-  padding: 40px;
-  background-color: #f4f6f8;
-  min-height: 100vh;
+
+
+.shoecontainer {
+  background-color: lightcoral;
 }
 
 .shoelist {
