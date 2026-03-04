@@ -1,5 +1,5 @@
 <template>
-    <div v-for="shoe in shoesbought" :key="shoe.id">
+    <div v-for="shoe in shoesowned" :key="shoe.id">
          <section class="shoecontainer"> 
             <div class="shoelist">
             <h2>{{ shoe.brand }} </h2>
@@ -9,11 +9,13 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import shoes from '@/components/shoes.vue'
-
+defineProps({
+  shoesowned: Array
+})
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
