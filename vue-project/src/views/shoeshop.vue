@@ -11,12 +11,15 @@
 import { ref } from 'vue'
 import shoes from '@/components/shoes.vue'
 import shoesbought from '@/components/shoesbought.vue'
+
 let restocktimer = ref(10)
 setInterval(() => {
-  shoes.forEach(shoe => {
-    shoe.instock = 10
-  });
-  restock
+  restocktimer.value -= 1
+  if (restocktimer.value === 0) {
+    restocktimer.value = 10
+    console.log("shoes restocked")
+  }
+  
 }, 1000);
 const shoesowned = ref([])
 let money = ref(2000)
