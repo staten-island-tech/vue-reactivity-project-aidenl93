@@ -22,6 +22,7 @@ const shoes = ref([
     brand: "Nike",
     model: "Air Jordan 1 Retro High",
     price: 180,
+    basePrice: 180,
     instock: 10
   },
   {
@@ -29,6 +30,7 @@ const shoes = ref([
     brand: "Nike",
     model: "LeBron 21",
     price: 200,
+    basePrice: 200,
     instock: 10
   },
   {
@@ -36,6 +38,7 @@ const shoes = ref([
     brand: "Adidas",
     model: "Yeezy Boost 350 V2",
     price: 230,
+    basePrice: 230,
     instock: 10
   },
   {
@@ -43,6 +46,7 @@ const shoes = ref([
     brand: "Adidas",
     model: "UltraBoost 1.0",
     price: 190,
+    basePrice: 190,
     instock: 10
   },
   {
@@ -50,6 +54,7 @@ const shoes = ref([
     brand: "Puma",
     model: "MB.03 LaMelo Ball",
     price: 125,
+    basePrice: 125,
     instock: 10
   },
   {
@@ -57,6 +62,7 @@ const shoes = ref([
     brand: "Under Armour",
     model: "Curry 11",
     price: 160,
+    basePrice: 160,
     instock: 10
   },
   {
@@ -64,6 +70,7 @@ const shoes = ref([
     brand: "New Balance",
     model: "550",
     price: 110,
+    basePrice: 110,
     instock: 10
   },
   {
@@ -71,10 +78,10 @@ const shoes = ref([
     brand: "Reebok",
     model: "Question Mid",
     price: 150,
+    basePrice: 150,
     instock: 10
   }
 ]);
-
 function buyShoe(shoe) {
   emit('buy', shoe)
 }
