@@ -4,6 +4,7 @@
             <div class="shoelist">
             <h2>{{ shoe.brand }} </h2>
             <h2>{{ shoe.model }} </h2>
+            
             </div>
         </section>
     </div>

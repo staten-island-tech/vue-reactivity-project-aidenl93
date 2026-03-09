@@ -5,6 +5,7 @@
               <div class="shoelist">
             <h2>{{ shoe.brand }} </h2>
             <h2>{{ shoe.model }} </h2>
+            <h2>Amount In Stock: {{ shoe.instock }}</h2>
             <button class="buybutton" @click="buyShoe(shoe)"> ${{ shoe.price }} </button>
               </div>
             </section>
@@ -20,49 +21,57 @@ const shoes = ref([
     id: 1,
     brand: "Nike",
     model: "Air Jordan 1 Retro High",
-    price: 180
+    price: 180,
+    instock: 10
   },
   {
     id: 2,
     brand: "Nike",
     model: "LeBron 21",
-    price: 200
+    price: 200,
+    instock: 10
   },
   {
     id: 3,
     brand: "Adidas",
     model: "Yeezy Boost 350 V2",
-    price: 230
+    price: 230,
+    instock: 10
   },
   {
     id: 4,
     brand: "Adidas",
     model: "UltraBoost 1.0",
-    price: 190
+    price: 190,
+    instock: 10
   },
   {
     id: 5,
     brand: "Puma",
     model: "MB.03 LaMelo Ball",
-    price: 125
+    price: 125,
+    instock: 10
   },
   {
     id: 6,
     brand: "Under Armour",
     model: "Curry 11",
-    price: 160
+    price: 160,
+    instock: 10
   },
   {
     id: 7,
     brand: "New Balance",
     model: "550",
-    price: 110
+    price: 110,
+    instock: 10
   },
   {
     id: 8,
     brand: "Reebok",
     model: "Question Mid",
-    price: 150
+    price: 150,
+    instock: 10
   }
 ]);
 
