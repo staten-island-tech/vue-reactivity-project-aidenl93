@@ -147,7 +147,7 @@ p {
   max-width: 600px;
   margin: 10px auto 20px auto;
   color: #555;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 body {
