@@ -93,7 +93,7 @@ setInterval(() => {
 
     shoes.value.forEach((shoe) => {
       shoe.instock = 10
-      shoe.price = shoe.basePrice
+      
     })
 
     console.log('shoes restocked')
