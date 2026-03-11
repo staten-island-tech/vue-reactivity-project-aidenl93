@@ -1,7 +1,14 @@
 <template>
   <h1>reselling simulator</h1>
+  <h2>how to play:</h2>
+  <p>
+    on restock, the shoe will go back to their restock prices. this is the lowest possible price.
+    the shoes can either increase or decrease in demand AT random every 5 seconds, and you can sell
+    them at a higher price to make profit.
+  </p>
   <h1>money: {{ money }}</h1>
   <h1>time until shoe restocks: {{ restocktimer }}</h1>
+  <h2>price change timer: {{ priceChangeTimer }}</h2>
   <Shoes :shoes="shoes" @buy="addShoe"></Shoes>
   <shoesbought :shoesowned="shoesowned" @sell="sellShoe"> </shoesbought>
 </template>
@@ -77,6 +84,7 @@ const shoes = ref([
   },
 ])
 let restocktimer = ref(60)
+let priceChangeTimer = ref(5)
 setInterval(() => {
   restocktimer.value -= 1
 
@@ -85,6 +93,7 @@ setInterval(() => {
 
     shoes.value.forEach((shoe) => {
       shoe.instock = 10
+      shoe.price = shoe.basePrice
     })
 
     console.log('shoes restocked')
@@ -109,4 +118,39 @@ function sellShoe(shoe) {
     money.value = shoe.price + money.value
   }
 }
+setInterval(() => {
+  priceChangeTimer.value -= 1
+  if (priceChangeTimer.value === 0) {
+    priceChangeTimer.value = 5
+    shoes.value.forEach((shoe) => {
+      const change = Math.floor(Math.random() * 21) - 10
+
+      shoe.price += change
+
+      if (shoe.price < shoe.basePrice) {
+        shoe.price = shoe.basePrice
+      }
+    })
+  }
+}, 1000)
 </script>
+<style scoped>
+h1,
+h2 {
+  text-align: center;
+  color: #222;
+  margin: 10px 0;
+}
+
+p {
+  text-align: center;
+  max-width: 600px;
+  margin: 10px auto 20px auto;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>
