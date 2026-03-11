@@ -2,7 +2,7 @@
   <h1>reselling simulator</h1>
   <h2>how to play:</h2>
   <p>
-    on restock, the shoe will go back to their restock prices. this is the lowest possible price.
+    on restock, the shoe will increase by 10.
     the shoes can either increase or decrease in demand AT random every 5 seconds, and you can sell
     them at a higher price to make profit.
   </p>
